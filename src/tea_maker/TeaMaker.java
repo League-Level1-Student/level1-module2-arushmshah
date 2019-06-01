@@ -2,10 +2,18 @@ package tea_maker;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
- */
+ */  
 
 public class TeaMaker {
-
+	public static void main(String[] args) {
+		
+	
+Cup cup = new Cup();
+Kettle kettle = new Kettle();
+TeaBag teabag = new TeaBag("Chamomile");
+kettle.boil();
+cup.makeTea(teabag, kettle.getWater());
+	}
 	/* Figure out how to make a cup of tea in this runner class, using the other classes below */
 
 }
@@ -34,7 +42,7 @@ class Kettle {
 	private Water water = new Water();
 
 	Water getWater() {
-		return water;
+		return water;    
 	}
 
 	void boil() {
